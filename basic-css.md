@@ -405,7 +405,7 @@ Doing it in ***this*** manner ***saves*** a ***lot*** of ***time*** and ***work*
 <section class="section">
     <h2 class="sentence">Related Resources</h2>
 
-+ [What is CSS?](https://www.w3.org/standards/webdesign/htmlcss.html)
++ [What is CSS?: W3.org](https://www.w3.org/standards/webdesign/htmlcss.html)
 
 + [Building Your First Web Page (CSS): Shay Howe](https://learn.shayhowe.com/html-css/building-your-first-web-page/)
 

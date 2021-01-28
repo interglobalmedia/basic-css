@@ -1,0 +1,23 @@
+{
+  "name": "basic-css",
+  "version": "1.0.0",
+  "description": "An introduction to basic CSS",
+  "main": "index.js",
+  "scripts": {
+    "slides": "npx reveal-md basic-structure-web-page.md",
+    "customcss": "npx reveal-md basic-css.md --css custom.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/interglobalmedia/basic-css.git"
+  },
+  "author": "Maria D. Campbell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/interglobalmedia/basic-css/issues"
+  },
+  "homepage": "https://github.com/interglobalmedia/basic-css#readme",
+  "devDependencies": {
+    "reveal-md": "^4.3.0"
+  }
+}

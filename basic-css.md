@@ -6,7 +6,7 @@
 <section class="section">
     <h2 class="sentence">So what is CSS anyway?</h2>
 
-`CSS` ***stands*** for `Cascading StyleSheets`.
+`CSS` ***stands*** for `Cascading Style Sheets`.
 
 `CSS` is the ***language*** for ***describing*** the `presentation` of `web pages`. That ***includes*** `colors`, `layout`, and `fonts`. It ***allows*** for the ***adaption*** of `presentation` to ***different*** types of ***devices***, such as `large screens`, `small screens`, or `printers`.
 
@@ -19,9 +19,9 @@
 <section class="section">
     <h2 class="sentence">So what does Cascading mean?</h2>
 
-`Cascading` ***means*** that a `style` ***applied*** to a `parent element` will ***also*** apply to ***all*** `children elements` ***within*** the `parent`.
+`Cascading` ***means*** that a `style` ***applied*** to a `parent element` will ***also*** apply to ***all*** `children elements` ***within*** the `parent`. In ***other*** words, [style sheets ***cascade***](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance). At a ***basic*** level, this ***means*** that the ***order*** of `CSS` ***rules*** matter. When ***two*** `rules` ***apply*** that have ***equal*** `specificity`, the one that appears ***last*** in the `CSS` is the ***one*** that will be ***used***.
 
-For ***example***, if you ***set*** the `color` of ***text*** within the `body` element to `red`, ***all*** `headings`, `paragraphs`, and ***other*** `text elements` ***within*** the `body` will ***also*** be the `color` ***red*** (***unless*** something ***else*** is ***specified***).
+In ***addition***, for ***example***, if you ***set*** the `color` of ***text*** within the `body` element to `red`, ***all*** `headings`, `paragraphs`, and ***other*** `text elements` ***within*** the `body` will ***also*** be the `color` ***red*** (***unless*** something ***else*** is ***specified***).
 
 ```css
 body {
@@ -63,7 +63,7 @@ The `a` ***represents*** the `element selector`, as it ***targets*** the `a` (`a
 <section class="section">
     <h2 class="sentence">How CSS Selectors are Defined</h2>
 
-`CSS` selectors are ***defined*** by ***first*** indicating the `CSS` selector, ***followed*** by an ***opening*** `{` and ***closing*** `}` curly brace.
+`CSS` selectors are ***defined*** by ***first*** indicating the `name` of the `CSS` selector, ***followed*** by an ***opening*** `{` and ***closing*** `}` curly brace.
 
 ```css
 a {
@@ -97,6 +97,66 @@ A `property declaration` should ***always*** `end` with a `:` ***semi-colon***.
 ---
 
 <section class="section">
+    <h2 class="sentence">Hex Color Codes in CSS</h2>
+
+The `value`of the `color` property is ***not*** only ***represented*** by `color` ***names***. One ***best*** practice is to ***use*** `hex color codes`, ***especially*** because they are ***supported*** by ***all*** browsers. In ***addition***, using `color names` ***instead*** of `hex color codes` is ***limited***. A computer can ***display*** millions of ***different*** colors, but ***remembering*** the `names` of ***every*** color is ***impossible***.
+
+That is ***why*** `CSS` uses `hex codes`. So ***instead*** of `pink`, I could use something ***like***:
+
+```css
+a {
+    color: #ffa9d9;
+}
+```
+
+which ***also*** represents a ***specific*** shade of `pink`.
+
+</section>
+
+---
+
+<section class="section">
+    <h2 class="sentence">What do Hex Color Codes Represent?</h2>
+
+`Hex color codes` ***represent*** `red`, `green`, and `blue`.
+
+A computer screen ***displays*** a `color` by ***combining*** `red` light, `green` light, and `blue` light.
+
+100% `red`, 100% `green`, and 100% `blue` ***produces*** `white`. 0% `red`, 0% `green`, and 0% `blue` ***produces*** `black`.
+
+The ***six*** digits of a `hex color code` are really ***three*** two-digit numbers, each ***representing*** the ***level*** of `red`, `green`, and `blue`. `#000100` is 0 `red`, the ***darkest*** shade of `green` ***without*** being `black`, and 0 `blue`.
+
+</section>
+
+---
+
+<section class="section">
+    <h2 class="sentence">Hex Codes Use the Hexadecimal System to Minimize Color Code Length</h2>
+
+There are `256` possible ***shades*** of red, green, and blue (0 through 255). If we wanted to ***produce*** `white`, a ***combination*** of the ***brightest*** levels of the ***three*** color ***levels***, we would need to write `#255255255`. But that is ***9*** digits long!
+
+`Hex color codes` ***use*** the `hexadecimal` ***number system*** to make it ***possible*** for `256` ***numbers*** to be ***represented*** with only ***two*** digits. In ***other*** words, `hexadecimal` ***color*** is ***specified*** with `#RRGGBB`.
+
+`RR` (`red`), `GG` (`green`), and `BB` (`blue`) are `hexadecimal` ***integers*** between `00` and `FF` ***specifying*** the ***intensity*** of the `color`.
+
+If you are ***interested*** in ***learning*** more about `Hex color codes`, the ***following*** posts are a good place to ***start***:
+
++ [Understanding Hex Color Codes: codeconquest](https://www.codeconquest.com/hex-color-codes/)
+
++ [How to Read Hex Color Codes: PluralSight](https://www.pluralsight.com/blog/tutorials/understanding-hexadecimal-colors-simple)
+
++ [Colors Hex: w3schools](https://www.w3schools.com/colors/colors_hexadecimal.asp)
+
++ [Free Binary Tutorial: codeconquest](https://www.codeconquest.com/tutorials/binary/)
+
+And a ***great*** site to find ***beautiful*** color palettes is [color-hex.com](https://www.color-hex.com/color-palettes/)
+
+
+</section>
+
+---
+
+<section class="section">
     <h2 class="sentence">The CSS Rule Set</h2>
 
 A `rule set` is a ***single*** section of `CSS` ***including*** the `selector`, the `curly braces`, and ***lines*** containing `property declarations` (`properties` and their `values`).
@@ -110,9 +170,9 @@ a {
 
 ***Here***, the [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) ***property***, which ***specifies*** the decoration to ***add*** to text, has been ***given*** the `value` of `none`, which ***means*** that `a` elements will ***not*** be `underlined` or contain ***any*** other ***kind*** of `text decoration`.
 
-It is ***important*** to ***note*** that if a `property declaration` is ***made*** inside a ***particular*** `rule set` of a `CSS selector` ***earlier*** in the `CSS` ***style sheet***, and then the ***same*** `CSS` selector `rule set`'s `property declaration(s)` are `modified` ***later***(***lower*** down) in the `style sheet`, the `property declarations` ***lower*** down the `style sheet` will ***override*** the `declarations` made ***earlier*** on (***higher*** up) in the `style sheet`.
+It is ***important*** to ***note*** that if a `property declaration` is ***made*** inside a ***particular*** `rule set` of a `CSS selector` ***earlier*** in the `CSS` ***style sheet***, and then the ***same*** `CSS` selector's `rule set` `property declaration(s)` are `modified` ***later***(***lower*** down) in the `style sheet`, the `property declarations` ***lower*** down the `style sheet` will ***override*** the `declarations` made ***earlier*** on (***higher*** up) in the `style sheet`.
 
-That's ***why*** it is ***important*** to have ***DRY*** `CSS`. `DRY` ***stands*** for `Don't Repeat Yourself`.
+That's ***one*** of the reasons ***why*** it is ***important*** to have ***DRY*** `CSS`. `DRY` ***stands*** for `Don't Repeat Yourself`.
 
 </section>
 
@@ -199,7 +259,7 @@ The `id selector` ***targets*** an `element` by its `id`. The `element` with a c
 <section class="section">
     <h2 class="sentence">The Universal Selector</h2>
 
-The `universal selector` ***represented*** by `*` (`asterisk`) selects ***all*** `HTML` elements on the ***page***.
+The `universal selector` ***represented*** by `*` (`asterisk`) targets ***all*** `HTML` elements on the ***page***, and ***all*** the `elements` ***receive*** the styling ***set*** by the `property declarations` within the `universal` selector `rule set`'s `declaration block`.
 
 For ***example***, I ***use*** the `universal selector` to ***create*** my ***own*** `custom CSS reset`. ***Typically***, I create the ***following*** `rule set`:
 
@@ -212,6 +272,16 @@ For ***example***, I ***use*** the `universal selector` to ***create*** my ***ow
 ```
 
 I will ***discuss*** what this ***means*** when we ***cover*** `CSS resets`. But for the ***purpose*** of ***describing*** what the `universal selector` is ***doing*** in this ***instance***, it ***applies*** the `property declarations` ***inside*** the `declaration block` to ***all*** the `elements` on the `HTML` ***page***.
+
+The `universal` selector can ***also*** target ***all*** elements inside ***another*** element, and ***those*** elements ***receive*** the `styling` ***set*** by the `property declarations` ***within*** the `rule set` in question's `declaration block`.
+
+```css
+article * {
+    text-transform: lowercase;
+}
+```
+
+Here, the `universal` selector ***targets*** all the `elements` ***inside*** the `article` element and ***transforms*** all their ***text*** to `lowercase`.
 
 </section>
 
@@ -284,7 +354,7 @@ input[name="email"] {
 
 + `Pseudo-element selectors` (select and style a part of an element)
 
-+ `Attribute selectors` (select elements based on an attribute or attribute value)
++ `Attribute selectors` (select elements based on an attribute name and/or attribute value)
 
 </section>
 
@@ -301,7 +371,7 @@ So far, we have gone over all the [simple selectors](https://www.w3schools.com/c
 
 + The `id` selector
 
-+ Selecting ***specific*** `elements` by ***class***
++ Selecting ***specific*** `elements` by ***class*** (or ***id***)
 
 + The `universal` selector
 
@@ -424,5 +494,9 @@ Doing it in ***this*** manner ***saves*** a ***lot*** of ***time*** and ***work*
 + [What is a form control in HTML?: stackoverflow](https://stackoverflow.com/questions/31739685/what-is-a-form-control-in-html)
 
 + [Beginner Concepts: How CSS Selectors Work: CSS Tricks](https://css-tricks.com/how-css-selectors-work/)
+
++ [Cascade and inheritance: MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
++ [Colors Hex: w3schools](https://www.w3schools.com/colors/colors_hexadecimal.asp)
 
 </section>

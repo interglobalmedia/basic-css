@@ -90,7 +90,7 @@ The `name` of the `property` ***above*** is `color`, and its `value` is `pink`. 
 
 `color: pink;` is referred to as a `property declaration`. A `property declaration` ***consists*** of a `property name` and its ***corresponding*** `value`. 
 
-A `property declaration` should ***always*** `end` with a `:` ***semi-colon***.
+A `property declaration` should ***always*** `end` with a `;` ***semi-colon***.
 
 </section>
 
